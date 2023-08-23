@@ -1,33 +1,4 @@
-<p align="center">
 
-</p>
-
-<h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
-
-<h2>Environments and Technologies Used</h2>
-
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
-- Active Directory Domain Services
-- PowerShell
-- Command Line
-
-<h2>Operating Systems Used </h2>
-
-- Windows Server 2022
-- Windows 10 (21H2)
-
-<h2>High-Level Deployment and Configuration Steps</h2>
-
-- Creating two virtual machines, one running Windows Server (Domain Controller) and the other running Windows 10, both on the same virtual network.
-- Set the Domain Controller to have a Static IP Address.
-- Ensure connectivity between the two Virtual Machines.
-- Install Active Directory onto the Domain Controller.
-- Create an Admin user and non-admin user in Active Directory.
-- Join your other Virtual Machine client to the Domain
-- Setup your client to allow non-admin users to use Remote Desktop.
-- Run a script to create many additional users to test remote desktop functionality.
 <p align="center">
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
