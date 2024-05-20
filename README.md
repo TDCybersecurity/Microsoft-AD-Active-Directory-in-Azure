@@ -31,6 +31,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Join your other virtual machine the client to the Domain.
 - Setup your client to allow non-admin users to use remote desktop.
 - Run a script to create many additional users to test remote desktop functionality.
+![AD Model](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/92414fb7-c0b8-4d59-b2a1-a3b60d9b7e1f)
 
 <h2>Deployment and Configuration Steps</h2>
 
