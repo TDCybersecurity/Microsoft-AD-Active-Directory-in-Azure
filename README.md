@@ -358,7 +358,7 @@ Take a random name **bacek.moju** and log into **Client-B** with Password as Pas
 
 Go to ExplorerThis PC\>C:Drive\>Users\> to see a log of who logged into the Virtual Machine.
 
-![](RackMultipart20240522-1-l8toj8_html_7dfba4a0503dd979.png)
+![ADB 8 5](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/9694f094-aeb3-4d60-8079-1c4b84066a54)
 
 8.5 Pick a Random employee **lab.texor**, go to **Client-B\>** do 11 failed logins to lock the account.
 
@@ -366,11 +366,9 @@ Go to ExplorerThis PC\>C:Drive\>Users\> to see a log of who logged into the Virt
 
 8.7 Properties\>Reset Password\>New Password | Confirm password\> OK
 
-![](RackMultipart20240522-1-l8toj8_html_336f20017b44cdd4.png)
-
-![](RackMultipart20240522-1-l8toj8_html_ec6d4e1786d7db0e.png)
-
-![](RackMultipart20240522-1-l8toj8_html_eab4c50e21a83c2c.png)
+![ADB 8 5](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/9694f094-aeb3-4d60-8079-1c4b84066a54)
+![ADB8 7](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/f43393a9-42cd-4f9e-b778-3680f7680b41)
+![ADB 8 7c](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/cf73eddf-786f-4829-8470-34f4fb54b654)
 
 Thank your for viewing my hands-on lab working with Azure Active Directory.
 <p>
