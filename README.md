@@ -10,6 +10,13 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 
 
+![ADB Rename this PC](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/da3b8544-8500-4c49-9643-65a9734fc494)
+
+
+
+
+
+
 
 
 
@@ -276,23 +283,22 @@ Create a new OU Organizational Unit " **\_CLIENTS**" and drag **Client-B** into 
 
 6.3 Go to Client-B Networking\>Network settings\>
 
-![](RackMultipart20240522-1-l8toj8_html_3219f318a83e43c8.png)
+![ADB 6 3](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/81b9f91a-70d4-4d8d-ba2d-feb9d6f11bcc)
 
-![](RackMultipart20240522-1-l8toj8_html_268131cd3ff35cdd.png)
+![ADB DNS](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/32348400-c147-4cc4-baf1-f5976daea297)
 
-![](RackMultipart20240522-1-l8toj8_html_1ea58bcf4be2b319.png)
+
 
 6.4 Restart **Client-B** from the Azure Portal to flush the DNS.
 
-![](RackMultipart20240522-1-l8toj8_html_138b0a7429668881.png)
+![ADB Client 1 restart](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/b68b4f54-506b-41ad-b24f-19f29eddbe21)
 
-6.5 RDC into Client-B, at command line do:
 
-6.6 RDC into Client-B check **whoami**, **hostname**, and **ipconfig /all**. Confirm that the DNS is updated to the Private IP of the **Domain Controller**. i.e.,10.1.0.4
+6.5 RDC into Client-B check **whoami**, **hostname**, and **ipconfig /all**. Confirm that the DNS is updated to the Private IP of the **Domain Controller**. i.e.,10.1.0.4
 ![ADB DNS private ip](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/2add720d-1ebf-4b4f-9d3a-359e91e0ace7)
 Right Windows Start menu\>Systems\>Rename this PC\>Change\>Domain change to **mydomain.com**
 
-6.7 Grant Joe\_Admin permission to join the domain.
+6.6 Grant Joe\_Admin permission to join the domain.
 
 ![ADB Rename this PC](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/69020d12-cd4e-45c5-8ab8-6e546e29d4c2)
 
@@ -306,13 +312,15 @@ Right Windows Start menu\>Systems\>Rename this PC\>Change\>Domain change t
 
 7.3 Add\>enter domain user\>Check Names (it is underlined and confirmed)\>OK\> See it as new users\>OK (It will update)
 
-  1. Go back to DC-B as Joe\_Amin
-  2. Go to ADUC\>mydomain.com\>Users\>Domain Users\>Members. These members now have RDC access.
-  3.
+7.4 Go back to DC-B as Joe\_Amin
 
-![](RackMultipart20240522-1-l8toj8_html_aa4d5a28817d4e92.png)
+7.5 Go to ADUC\>mydomain.com\>Users\>Domain Users\>Members. These members now have RDC access.
 
-**8 Create additional users and attempt to log into Client-1 with one of the users.**
+7.6 This is a screen hot of the members:
+![ADB 7 6 Remote](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/b007b66a-e9f6-4999-b168-ba55b5add057)
+
+
+8 Create additional users and attempt to log into Client-1 with one of the users.**
 
 Login to DC-B as Joe\_Admin
 
