@@ -8,6 +8,13 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 
 
+
+
+
+
+
+
+
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
@@ -176,10 +183,10 @@ Check upper right corner of screen. Click yellow hazard sign.
 
 ![ADB3 4](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/0e956cb8-f169-410b-8319-e441f4b81dd4)
 
-![ADBPassword1](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/e1acc6a4-969a-4309-90ec-f08e4804e455)
+
 4.5 Domain Controller Options: **Password**: **Password1**| **Confirm Password**: **Password1** click Next\>
 
-![](RackMultipart20240522-1-l8toj8_html_b504b5024ec7a59c.png)
+![ADBPassword1](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/e1acc6a4-969a-4309-90ec-f08e4804e455)
 
 4.6 DNS Options Next\>The NetBIOS domain name: **MYDOMAIN** _auto-populates in the box_ Next\>
 
@@ -187,17 +194,19 @@ Paths Next\>Review Options Next\>
 
 Prerequisites Check\>Install and wait for Progress to change to This server was successfully installed.
 
-![](RackMultipart20240522-1-l8toj8_html_1dfb4bac18aaf8ab.png)
+![ADBInstallAD](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/e3f858fa-13ac-4e9c-ad31-7afee1d45e4a)
 
 4.7 You're about to be signed out. You will lose your RDC connection and will need to sign back in.
 
-![](RackMultipart20240522-1-l8toj8_html_88ae75a3ed339a1f.png)
+![ADB4 7A](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/9f1c0861-82e2-411b-a770-d5683deccd4f)
 
-![](RackMultipart20240522-1-l8toj8_html_624b521d97858a20.png)
+![ADB4 7A](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/033ed29d-f7b1-4f6e-b4ab-f8cd9783caf0)
+
+
 
 4.8 Reconnect to the RDC, in **DC-B** Refresh, copy Public IP and RDC again. Credentials. IPs stayed the same.
 
-![](RackMultipart20240522-1-l8toj8_html_51700b38281023e5.png)
+
 
 **5 Create an Administrator and Normal User Account in (AD) Active Directory**
 
@@ -211,35 +220,25 @@ Create a new employee named " **Joe Doe**" (same password) with the username of 
 
 5.1 **Log in with the**** FQDN **which is** mydomain.com\Terry **and** Password Terry1234567. **** Don't miss this step.**
 
-![](RackMultipart20240522-1-l8toj8_html_d90666597a1fc1e8.png)
+![ADBmydomain sign in](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/5c9c73f2-7aa5-4794-98cf-ea5b18a091c8)
 
-![](RackMultipart20240522-1-l8toj8_html_9253713f96fe10f3.png)
+![ADBAD menu](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/87b61480-5f36-49ba-8205-a8b3dfb143bb)
+
 
 5.2 Right-click on **mydomain.com**\> Select **New**\> Select **Organizational Unit**
 
-![](RackMultipart20240522-1-l8toj8_html_9b8eecdb4439e8ca.png)
+![ADB Admin user](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/7fb74bf9-8834-4a59-8f33-eccd92e4b911)
 
 5.3 Create two organizations: \_EMPLOYEES and \_ADMINS and then refresh so the OU's go to the top of the list.
 
 5.4 In mydomain.com go \_ADMINS\> then New\> then User
 
-![](RackMultipart20240522-1-l8toj8_html_f537ef6aaec6c3bc.png)
+![ADB Employees](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/facb68ef-f657-422b-bd47-2421266e4211)
+![ADB Open OU](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/0c672af9-5d2c-4afa-8cbb-3dc65eb6c22e)
 
-![](RackMultipart20240522-1-l8toj8_html_858542b002a126ac.png)
-
-![](RackMultipart20240522-1-l8toj8_html_795f114211652448.png)
-
-![](RackMultipart20240522-1-l8toj8_html_a5da1dd41975dd2c.png)
-
-![](RackMultipart20240522-1-l8toj8_html_a7af7dc383004c93.png)
 
 Make Joe an Admin
 
-![](RackMultipart20240522-1-l8toj8_html_3c0aae249ba17284.png)
-
-![](RackMultipart20240522-1-l8toj8_html_f053a11baae511c3.png)
-
-![](RackMultipart20240522-1-l8toj8_html_f053a11baae511c3.png)
 
 5.5 Add Joe\_Admin to the **"Domain Admins" Security Group**. **Add\> Domain Admins\>OK\>Apply\>OK**
 
