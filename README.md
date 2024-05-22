@@ -38,7 +38,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 Think of a **domain controller** like a **police station** in a town. Here's how it would work:
 
-1. **Police Chief (Domain Controller):** Manages everything, knowing all the officers and their roles.
+1. **Police Chief (Domain Controller):**Manages everything, knowing all the officers and their roles.
 2. **Officer Check-in (Log Manager):** When officers start their shift, they check in with the police chief to confirm their identity and get their assignments.
 3. **Police Officers (Access Control):** Have different access levels. Some can access files, while others cannot, based on their clearance.
 4. **Dispatcher (Organizer):** Coordinates resources and sends updates to all officers at once, just like pushing software updates to all computers.
