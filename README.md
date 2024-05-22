@@ -320,6 +320,11 @@ Right Windows Start menu\>Systems\>Rename this PC\>Change\>Domain change t
 ![ADB 7 6 Remote](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/b007b66a-e9f6-4999-b168-ba55b5add057)
 
 
+![ADB 8 2a](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/c3852a51-aaa3-4e53-8761-8c8aa34db402)
+![ADB 8 2b](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/9245a76a-cb0d-40a4-9b07-85d4c6f94407)
+![ADB 8 2c](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/353033cd-7c8d-420e-bba5-d3a7ea188e0a)
+
+
 8 Create additional users and attempt to log into Client-1 with one of the users.**
 
 Login to DC-B as Joe\_Admin
@@ -332,7 +337,7 @@ Open **PowerShell\_ISE**** Run as an Administrator**.
 
 8.2 Go to lab notes and copy the code doc, come back to code editor and paste code. Reduce clients to 25.
 
-![](RackMultipart20240522-1-l8toj8_html_7786364feaebd2f0.png)
+![ADB 8 2 names](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/a7330dde-0a21-4a35-8e72-b81d47c4c951)
 
 8.3 When finished, open _ADUC Active Directory Users and Computers_ and observe the accounts in the appropriate OU.
 
@@ -341,12 +346,15 @@ Select a random new user and use the wrong password 10 times. Go into ADUC to un
 ADUC\>mydomain.com\>\_EMPLOYEES. Observe the names.
 
 Take a random name **bacek.moju** and log into **Client-B** with Password as Password1.
+![ADB 8 3](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/1137fb3a-b5f8-4967-81e3-bd8ffd1bfd98)
+
 
 ![](RackMultipart20240522-1-l8toj8_html_4a74f502aab3311d.png)
 
 **8.4 bacek.moju accessing Client-B Virtual machine**
 
-![](RackMultipart20240522-1-l8toj8_html_fcca26f6336a22ac.png)
+![adb 8 4 bacek](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/dbc78c34-a8f9-4fc4-8e32-8be315b0b74e)
+
 
 Go to ExplorerThis PC\>C:Drive\>Users\> to see a log of who logged into the Virtual Machine.
 
