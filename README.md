@@ -176,6 +176,7 @@ Check upper right corner of screen. Click yellow hazard sign.
 
 ![ADB3 4](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/0e956cb8-f169-410b-8319-e441f4b81dd4)
 
+![ADBPassword1](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/e1acc6a4-969a-4309-90ec-f08e4804e455)
 4.5 Domain Controller Options: **Password**: **Password1**| **Confirm Password**: **Password1** click Next\>
 
 ![](RackMultipart20240522-1-l8toj8_html_b504b5024ec7a59c.png)
