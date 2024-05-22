@@ -3,7 +3,7 @@
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
 
-<h2>On-premises Active Directory deployed in the Microsoft Azure</h2>
+<h1>Deploying Active Directory inside of Azure and Creating Users</h1>
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
 
@@ -33,8 +33,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Run a script to create many additional users to test remote desktop functionality.
 ![AD Model](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/92414fb7-c0b8-4d59-b2a1-a3b60d9b7e1f)
 
-<h2>Deployment and Configuration Steps</h2>
-# **Deploying Active Direct inside of Azure and Creating Users**
+<h2>This analogy may help you put this in perspective</h2>
+
 
 ![](RackMultipart20240522-1-l8toj8_html_db4febaba9fa13b.png)
 
@@ -46,7 +46,7 @@ Think of a **domain controller** like a **police station** in a town. Here's how
 4. **Dispatcher (Organizer):** Coordinates resources and sends updates to all officers at once, just like pushing software updates to all computers.
 5. **Admin Staff (IT Support):** If an officer forgets their assignment or loses their badge, admin staff can quickly update their records and get them back on track.
 
-\*_ **Active Directory Group Policy** _ allows administrators to centrally manage and configure operating systems, applications, and user settings across a network.
+\* **Active Directory Group Policy** _ allows administrators to centrally manage and configure operating systems, applications, and user settings across a network.
 
 1. **Setup Resources in Azure**
 
@@ -68,9 +68,9 @@ Change the **Domain Controller's vNIC Private IP Address** from Dynamic to **Sta
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AD-Lab-B | DC-B | (US) East US2 | No infrastructure | Standard | **Windows Server** 2022 DataCenterAzure Edition -x64 Gen2 | Standard D4s v3 4 vcpus 16 GiB | Terry | Terry1234567 |
 
- Would you like to use an existing Windows Server License?
+- [x] checked Would you like to use an existing Windows Server License?
 
- I confirm I have an eligible Windows Server license with Software Assurance\* or Windows Server subscription to apply this Azure Hybrid Benefit. Then click **Review+create.**
+- [x] checked I confirm I have an eligible Windows Server license with Software Assurance\* or Windows Server subscription to apply this Azure Hybrid Benefit. Then click **Review+create.**
 
   1. **Validation passed**. Next click **Create.** This will create your resources.  **Your deployment is complete.**
   2. Validation passed \> **Create**
@@ -81,7 +81,7 @@ Change the **Domain Controller's vNIC Private IP Address** from Dynamic to **Sta
 
 | **Resource Group**| **Virtual Machine name**| **Region**| **Availability Options**| **Security Type**| **Image**| **Size**| **Username**| **Password**|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| AD-Lab-A | Client-A | (US)East US 2 | No infrastructure | Standard | **Windows 10** Pro version 22H2 | Standard E4s v3 4 vcpus 16 GiB | Terry | Terry1234567 |
+| AD-Lab-B | Client-B | (US)East US 2 | No infrastructure | Standard | **Windows 10** Pro version 22H2 | Standard E4s v3 4 vcpus 16 GiB | Terry | Terry1234567 |
 
 2.1 Make sure to that virtual network\* is DC-B-vnet on the Networking tab. Click **Review + create.**
 
