@@ -112,15 +112,20 @@ Change the **Domain Controller's vNIC Private IP Address** from Dynamic to **Sta
 
 3.0 Using RDC login to **Client-B****(IP 172.210.214.80) **and ping** DC-B's ****Private IP Address** with **ping -t**** 10.1.0.4 **which is a** perpetual ping **.** Request timed out**.
 
-![](RackMultipart20240522-1-l8toj8_html_dab7a4eb33324549.png)
+![ADB2 0ping](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/01f7f217-7d81-4fa8-b019-69ef303b4449)
+
+
+
 
 3.1 Login to the **Domain Controller****(IP 52.225.226.23) **and** enable ICMPv4 **on** Inbound Rules **in the** local Window Firewall **. Type** wf.msc**in search bar _(Microsoft Common Console Document)_. Go to**Inbound Rules**
 
-![](RackMultipart20240522-1-l8toj8_html_7025bb592e8adecc.png)
+![ADB2Inbound Rules](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/7159df8e-19ec-4e71-b255-7ed95146e5f7)
+
 
 3.2 Change both Echo Request Rules, so that **ENABLED** goes from NO to YES. Now you have ICMP.
 
-![](RackMultipart20240522-1-l8toj8_html_3190016af5cc11ca.png)
+![ADB icmp](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/a94f8d62-676c-4f91-97bc-eaec28dc7da6)
+
 
 3.3 Go back to **Client-B** and observe command prompt **ping -t**.
 
