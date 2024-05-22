@@ -74,6 +74,7 @@ Change the **Domain Controller's vNIC Private IP Address** from Dynamic to **Sta
 
   1. **Validation passed**. Next click **Create.** This will create your resources.  **Your deployment is complete.**
   2. Validation passed \> **Create**
+![ADB1 4](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/6fc8d59e-dfee-42fb-b2ac-99065ba56164)
 
 ![](RackMultipart20240522-1-l8toj8_html_56e17eedb8f4aaaa.png)
 
