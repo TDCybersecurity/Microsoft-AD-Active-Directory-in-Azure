@@ -234,6 +234,7 @@ Create a new employee named " **Joe Doe**" (same password) with the username of 
 5.4 In mydomain.com go \_ADMINS\> then New\> then User
 
 ![ADB Employees](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/facb68ef-f657-422b-bd47-2421266e4211)
+
 ![ADB Open OU](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/0c672af9-5d2c-4afa-8cbb-3dc65eb6c22e)
 
 
