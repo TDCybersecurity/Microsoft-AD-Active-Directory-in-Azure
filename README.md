@@ -174,7 +174,7 @@ Check upper right corner of screen. Click yellow hazard sign.
 
 4.4 Deployment Configuration popup. ****** Add a new forest **. At Root domain name:** mydomain.com **click** Next\>**
 
-![](RackMultipart20240522-1-l8toj8_html_5f94f71281d9bad1.png)
+![ADB3 4](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/0e956cb8-f169-410b-8319-e441f4b81dd4)
 
 4.5 Domain Controller Options: **Password**: **Password1**| **Confirm Password**: **Password1** click Next\>
 
