@@ -131,7 +131,8 @@ Change the **Domain Controller's vNIC Private IP Address** from Dynamic to **Sta
 
 Confirm that **ping -t** is working. **Reply from 10.1.0.4:bytes=32 time=1ms TTL=128 with the continuous ping switch.**
 
-![](RackMultipart20240522-1-l8toj8_html_8a79b72578ff1c62.png)
+![AD3 3ping reply](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/f5f40232-15b7-4786-9b90-33be0c0176bd)
+
 
 1. **Install Active Directory**
 
