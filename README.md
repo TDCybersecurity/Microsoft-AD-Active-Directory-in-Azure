@@ -15,6 +15,12 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 
 
+
+
+
+
+
+
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
@@ -236,7 +242,10 @@ Create a new employee named " **Joe Doe**" (same password) with the username of 
 ![ADB Employees](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/facb68ef-f657-422b-bd47-2421266e4211)
 ![ADB5 4 Admins](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/b20242b7-adb2-47b2-94d0-15cafd47bb54)
 ![ADB Open OU](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/0c672af9-5d2c-4afa-8cbb-3dc65eb6c22e)
-
+![ADB Joe Doe](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/80ae7a73-abab-493e-8e39-2ce7d06e2c4a)
+![ADB Password1](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/f7aaa4f2-2328-48cf-8101-3597bd11aaec)
+![ADB Joe prop](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/b1f6d6ac-6f92-4f47-bfbd-147c4ad37451)
+![ADB Domain Admins](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/447cfee2-fc2e-4305-bdb4-b2c27966d678)
 
 Make Joe an Admin
 
@@ -277,13 +286,15 @@ Create a new OU Organizational Unit " **\_CLIENTS**" and drag **Client-B** into 
 
 ![](RackMultipart20240522-1-l8toj8_html_138b0a7429668881.png)
 
-6.5 RDC into Client-B, at command line do ![](RackMultipart20240522-1-l8toj8_html_ac4f4479ec170ac4.png)6.6 RDC into Client-B check **whoami**, **hostname**, and **ipconfig /all**. Confirm that the DNS is updated to the Private IP of the **Domain Controller**. i.e.,10.1.0.4
+6.5 RDC into Client-B, at command line do:
 
+6.6 RDC into Client-B check **whoami**, **hostname**, and **ipconfig /all**. Confirm that the DNS is updated to the Private IP of the **Domain Controller**. i.e.,10.1.0.4
+![ADB DNS private ip](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/2add720d-1ebf-4b4f-9d3a-359e91e0ace7)
 Right Windows Start menu\>Systems\>Rename this PC\>Change\>Domain change to **mydomain.com**
 
 6.7 Grant Joe\_Admin permission to join the domain.
 
-![](RackMultipart20240522-1-l8toj8_html_7e09f7fe712a60de.png)
+![ADB Rename this PC](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/69020d12-cd4e-45c5-8ab8-6e546e29d4c2)
 
 ![](RackMultipart20240522-1-l8toj8_html_5dcaeb84c5209234.png)
 
