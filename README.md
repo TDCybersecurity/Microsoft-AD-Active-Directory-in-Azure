@@ -6,28 +6,6 @@
 <h1>Deploying Active Directory inside of Azure and Creating Users</h1>
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
-
-
-
-
-![ADB Rename this PC](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/da3b8544-8500-4c49-9643-65a9734fc494)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
@@ -56,7 +34,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h2>This analogy may help you put this in perspective</h2>
 
 
-![](RackMultipart20240522-1-l8toj8_html_db4febaba9fa13b.png)
+
 
 Think of a **domain controller** like a **police station** in a town. Here's how it would work:
 
@@ -68,7 +46,7 @@ Think of a **domain controller** like a **police station** in a town. Here's how
 
 \* **Active Directory Group Policy** _ allows administrators to centrally manage and configure operating systems, applications, and user settings across a network.
 
-1. **Setup Resources in Azure**
+<h2>1. Setup Resources in Azure</h2>
 
 Create a **Resource Group** and name it **AD-Lab-B**
 
@@ -98,7 +76,8 @@ Change the **Domain Controller's vNIC Private IP Address** from Dynamic to **Sta
 
 ![](RackMultipart20240522-1-l8toj8_html_56e17eedb8f4aaaa.png)
 
-2.0 Click on **Create another VM**, at **Resource group**\* select **AD-Lab-A**. Create using this information. **make sure**  **Review + Create**
+<h2>2. Create another VM at Resource group selecing AD-Lab-B</h2>h2>
+Create using this information. **make sure**  **Review + Create**
 
 | **Resource Group**| **Virtual Machine name**| **Region**| **Availability Options**| **Security Type**| **Image**| **Size**| **Username**| **Password**|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -128,33 +107,33 @@ Change the **Domain Controller's vNIC Private IP Address** from Dynamic to **Sta
 | **DC-B**| **52.225.226.23**| **10.1.0.4**| **DC-B-vnet/default**|
 | **Client-B**| **172.210.214.80**| **10.1.05**| **DC-B-vnet/default**|
 
-1. **Ensure Connectivity between the Client and the Domain Controller**
+<h2>3. Ensure Connectivity between the Client and the Domain Controller</h2>
 
-3.0 Using RDC login to **Client-B****(IP 172.210.214.80) **and ping** DC-B's ****Private IP Address** with **ping -t**** 10.1.0.4 **which is a** perpetual ping **.** Request timed out**.
+3.1 Using RDC login to **Client-B****(IP 172.210.214.80) **and ping** DC-B's ****Private IP Address** with **ping -t**** 10.1.0.4 **which is a** perpetual ping **.** Request timed out**.
 
 ![ADB2 0ping](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/01f7f217-7d81-4fa8-b019-69ef303b4449)
 
 
 
 
-3.1 Login to the **Domain Controller****(IP 52.225.226.23) **and** enable ICMPv4 **on** Inbound Rules **in the** local Window Firewall **. Type** wf.msc**in search bar _(Microsoft Common Console Document)_. Go to**Inbound Rules**
+3.2 Login to the **Domain Controller****(IP 52.225.226.23) **and** enable ICMPv4 **on** Inbound Rules **in the** local Window Firewall **. Type** wf.msc**in search bar _(Microsoft Common Console Document)_. Go to**Inbound Rules**
 
 ![ADB2Inbound Rules](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/7159df8e-19ec-4e71-b255-7ed95146e5f7)
 
 
-3.2 Change both Echo Request Rules, so that **ENABLED** goes from NO to YES. Now you have ICMP.
+3.3 Change both Echo Request Rules, so that **ENABLED** goes from NO to YES. Now you have ICMP.
 
 ![ADB icmp](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/a94f8d62-676c-4f91-97bc-eaec28dc7da6)
 
 
-3.3 Go back to **Client-B** and observe command prompt **ping -t**.
+3.4 Go back to **Client-B** and observe command prompt **ping -t**.
 
 Confirm that **ping -t** is working. **Reply from 10.1.0.4:bytes=32 time=1ms TTL=128 with the continuous ping switch.**
 
 ![AD3 3ping reply](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/f5f40232-15b7-4786-9b90-33be0c0176bd)
 
 
-1. **Install Active Directory**
+<h2>4. Install Active Directory</h2>
 
 Login to DC-11 and install **Active Directory Domain Services**
 
@@ -221,7 +200,7 @@ Prerequisites Check\>Install and wait for Progress to change to This server was 
 
 
 
-**5 Create an Administrator and Normal User Account in (AD) Active Directory**
+<h2>5. Create an Administrator and Normal User Account in (AD) Active Directory</h2>
 
 In **Active Directory Users and Computers (ADUC),** create an **Organizational Unit (OU)** called " **\_EMPLOYEES**".
 
@@ -259,11 +238,13 @@ Make Joe an Admin
 
 5.5 Add Joe\_Admin to the **"Domain Admins" Security Group**. **Add\> Domain Admins\>OK\>Apply\>OK**
 
+![ADB Rename this PC](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/da3b8544-8500-4c49-9643-65a9734fc494)
+
 5.6 Logout/Close the connection to **DC-B** and log back in as " **mydomain.com\Joe\_Admin**" from now on.
 
 5.7 Login as user **Joe\_Admin** with **Password1** as you Admin account from now on.
 
-**6 Join Client-B to your Domain (mydomain.com)**
+<h2>6. Join Client-B to your Domain (mydomain.com)</h2>
 
 From the Azure Portal, set **Client-B DNS** setting to the DC-1 Private IP Address.
 
@@ -275,13 +256,14 @@ Login to the Domain Controller and **verify Client-B** shows up in ADUC.
 
 Create a new OU Organizational Unit " **\_CLIENTS**" and drag **Client-B** into that folder.
 
-6.0 RDC back into DC-B using the Public IP and **Joe\_Admin** as the user.
+6.0 RDC back into DC-B using the Public IP and Joe\_Admin as the user.
 
 6.1 Open command line to confirm that you are using **Joe\_Admin**
 
+
 6.2 Go Client-B and Restart.
 
-6.3 Go to Client-B Networking\>Network settings\>
+6.3 Go to Client-B Networking > Network settings >
 
 ![ADB 6 3](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/81b9f91a-70d4-4d8d-ba2d-feb9d6f11bcc)
 
@@ -304,7 +286,7 @@ Right Windows Start menu\>Systems\>Rename this PC\>Change\>Domain change t
 
 ![](RackMultipart20240522-1-l8toj8_html_5dcaeb84c5209234.png)
 
-**7 Setup Remote Desktop for non-administrative users on Client-1**
+<h2>7. Setup Remote Desktop for non-administrative users on Client-1</h2>
 
 7.1 Log into Client-B as **mydomain.com\Joe\_Admin**
 
@@ -320,12 +302,10 @@ Right Windows Start menu\>Systems\>Rename this PC\>Change\>Domain change t
 ![ADB 7 6 Remote](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/b007b66a-e9f6-4999-b168-ba55b5add057)
 
 
-![ADB 8 2a](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/c3852a51-aaa3-4e53-8761-8c8aa34db402)
-![ADB 8 2b](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/9245a76a-cb0d-40a4-9b07-85d4c6f94407)
-![ADB 8 2c](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/353033cd-7c8d-420e-bba5-d3a7ea188e0a)
 
 
-8 Create additional users and attempt to log into Client-1 with one of the users.**
+
+<h2>8. Create additional users and attempt to log into Client-1 with one of the users.</h2>
 
 Login to DC-B as Joe\_Admin
 
@@ -366,11 +346,12 @@ Go to ExplorerThis PC\>C:Drive\>Users\> to see a log of who logged into the Virt
 
 8.7 Properties\>Reset Password\>New Password | Confirm password\> OK
 
-![ADB 8 5](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/9694f094-aeb3-4d60-8079-1c4b84066a54)
+
 ![ADB8 7](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/f43393a9-42cd-4f9e-b778-3680f7680b41)
+![ADB8](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/f3ea43a0-5384-42c6-9b4c-46bfc5ae593c)
 ![ADB 8 7c](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/cf73eddf-786f-4829-8470-34f4fb54b654)
 
-Thank your for viewing my hands-on lab working with Azure Active Directory.
+<h2>Thank you for viewing my hands-on lab using Active Directory in Microsoft Azure.</h2>
 <p>
 
 </p>
