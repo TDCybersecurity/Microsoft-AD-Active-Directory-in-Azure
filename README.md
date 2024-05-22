@@ -95,10 +95,11 @@ Change the **Domain Controller's vNIC Private IP Address** from Dynamic to **Sta
 2.4 Go to DC-B\>Networking\>Network Settings\>NIC\>ipconfig1
 
 2.5 Networking\>Network interface/IP configuration\> Edit IP configuration\> Static \> Save.
+![ADB3 0](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/2c28edf4-181b-4bb6-8a51-e12e5aacc41e)
+![ADB3 1](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/dacc6834-1683-4fbd-be1f-e7c86b6f11d4)
 
-![](RackMultipart20240522-1-l8toj8_html_594cd5d5e6d02330.png)
 
-![](RackMultipart20240522-1-l8toj8_html_fe6a87b8d6848cdb.png)
+
 
 2.6 Observe information from both machines, confirm public and private IP addresses, and virtual network.
 
