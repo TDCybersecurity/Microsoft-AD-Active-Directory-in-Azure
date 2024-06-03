@@ -44,7 +44,7 @@ Think of a **domain controller** like a **police station** in a town. Here's how
 4. **Dispatcher (Organizer):** Coordinates resources and sends updates to all officers at once, just like pushing software updates to all computers.
 5. **Admin Staff (IT Support):** If an officer forgets their assignment or loses their badge, admin staff can quickly update their records and get them back on track.
 
-\* **Active Directory Group Policy** _ allows administrators to centrally manage and configure operating systems, applications, and user settings across a network.
+\* **Active Directory Group Policy** allows administrators to centrally manage and configure operating systems, applications, and user settings across a network.
 
 <h2>1. Setup Resources in Azure</h2>
 
@@ -351,7 +351,7 @@ Go to ExplorerThis PC\>C:Drive\>Users\> to see a log of who logged into the Virt
 ![ADB8](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/f3ea43a0-5384-42c6-9b4c-46bfc5ae593c)
 ![ADB 8 7c](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/cf73eddf-786f-4829-8470-34f4fb54b654)
 
-<h2>Thank you for viewing my hands-on lab using Active Directory in Microsoft Azure.</h2>
+<h2>Thank you for viewing my hands-on lab, which demonstrates deploying Active Directory in Microsoft Azure and creating users.</h2>
 <p>
 
 </p>
