@@ -44,7 +44,7 @@ Think of a **domain controller** like a **police station** in a town. Here's how
 4. **Dispatcher (Organizer):** Coordinates resources and sends updates to all officers at once, just like pushing software updates to all computers.
 5. **Admin Staff (IT Support):** If an officer forgets their assignment or loses their badge, admin staff can quickly update their records and get them back on track.
 
-\* **Active Directory Group Policy** allows administrators to centrally manage and configure operating systems, applications, and user settings across a network.
+**Active Directory Group Policy** allows administrators to centrally manage and configure operating systems, applications, and user settings across a network.
 
 <h2>1. Setup Resources in Azure</h2>
 
@@ -58,20 +58,21 @@ Make sure DC-A and Client-A are in the same **Virtual network/subnet**.
 
 Change the **Domain Controller's vNIC Private IP Address** from Dynamic to **Static**
 
-  1. Go to **portal.azure.com**\> Click on +Create a Resource\> Click on Virtual Machine\>Click on Create new.
+  1. Go to **portal.azure.com**\> Click on +Create a Resource\> Click on &#x1F5A5; Virtual Machine\>Click on Create new.
 
-1.2 Search virtual machines \> +Create\>Azure virtual machines: Create using this information.
+  1.2 Search virtual machines \> +Create\>Azure virtual machines: Create using this information.
 
 | **Resource Group**| **Virtual Machine name**| **Region**| **Availability Options**| **Security Type**| **Image**| **Size**| **Username**| **Password**|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | AD-Lab-B | DC-B | (US) East US2 | No infrastructure | Standard | **Windows Server** 2022 DataCenterAzure Edition -x64 Gen2 | Standard D4s v3 4 vcpus 16 GiB | Terry | Terry1234567 |
 
-- [x] checked Would you like to use an existing Windows Server License?
+- [x] Would you like to use an existing Windows Server License?
 
-- [x] checked I confirm I have an eligible Windows Server license with Software Assurance\* or Windows Server subscription to apply this Azure Hybrid Benefit. Then click **Review+create.**
+- [x] I confirm I have an eligible Windows Server license with Software Assurance\* or Windows Server subscription to apply this Azure Hybrid Benefit. Then click **Review+create.**
 
-  1. **Validation passed**. Next click **Create.** This will create your resources.  **Your deployment is complete.**
-  2. Validation passed \> **Create**
+1. **Validation passed**. Next click **Create.** This will create your resources.
+- [x] Your deployment is complete.
+2. Validation passed. Click on **Create**
 ![ADB1 4](https://github.com/TDCybersecurity/Microsoft-AD-Active-Directory-in-Azure/assets/142702123/6fc8d59e-dfee-42fb-b2ac-99065ba56164)
 
 ![](RackMultipart20240522-1-l8toj8_html_56e17eedb8f4aaaa.png)
@@ -85,9 +86,10 @@ Create using this information. **make sure**  **Review + Create**
 
 2.1 Make sure to that virtual network\* is DC-B-vnet on the Networking tab. Click **Review + create.**
 
-2.2 **Validation Passed**
+- [x] **Validation Passed**
 
-  1. **Deployment is in Progress…while resources get created…then…**  **Your deployment is complete.**  **Go to Resources**
+2.2 **Deployment is in Progress.....wait while the resources get created
+-[x] Your deployment is complete. Once you confirm the deployment is complete.  **Go to Resources**
 
 2.3 Set **Domain Controller's vNIC** from **Dynamic** to **Static**.
 
